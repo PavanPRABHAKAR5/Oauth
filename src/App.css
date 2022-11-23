@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-/* body{
-  background-color: rgb(232, 231, 231);
-} */
+body{
+  /* background-color: rgb(243, 230, 211); */
+  margin: 2%;
+}
 /* .App {
   text-align: center;
 } */

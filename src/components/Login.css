@@ -12,3 +12,39 @@
 .btn{
     position: relative;
 }
+
+.navbar{
+    background-color: skyblue;
+    height: 15vh;
+}
+
+.navbar-brand{
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.signout{
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+Table{
+    background-color: white;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro p{
+    color: red;
+    font-weight: bolder;
+}
+
+.user{
+    font-size: 18px;
+    font-weight: normal;
+}

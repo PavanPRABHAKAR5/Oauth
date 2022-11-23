@@ -76,7 +76,7 @@ const AddPost = ({id, setBookId}) => {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBookTitle">
             <InputGroup>
-              <InputGroup.Text id="formBookTitle">B</InputGroup.Text>
+              <InputGroup.Text id="formBookTitle">Book</InputGroup.Text>
               <Form.Control
                 type="text"
                 placeholder="Book Title"
@@ -88,7 +88,7 @@ const AddPost = ({id, setBookId}) => {
 
           <Form.Group className="mb-3" controlId="formBookAuthor">
             <InputGroup>
-              <InputGroup.Text id="formBookAuthor">A</InputGroup.Text>
+              <InputGroup.Text id="formBookAuthor">Author</InputGroup.Text>
               <Form.Control
                 type="text"
                 placeholder="Book Author"
@@ -125,7 +125,9 @@ const AddPost = ({id, setBookId}) => {
             </Button>
           </div>
         </Form>
+        <p className='mt-4' style={{color:"red"}}>After performing each operation click on Refresh button to view changes in table</p>
       </div>
+      
         </>
     )
 }

@@ -24,7 +24,8 @@ const PostList = ({getBookId}) => {
   {/* <pre>{JSON.stringify(books, undefined, 2)}</pre> */}
   <div className="p-4 box">
     <div className='mb-2'>
-        <Button varient="dark edit" onClick={getPosts}>Refresh</Button>
+        <Button variant="dark" onClick={getPosts}>Refresh</Button>
+        
     </div>
     <Table striped bordered hover size="sm">
         <thead>
@@ -45,8 +46,8 @@ const PostList = ({getBookId}) => {
                     <td>{doc.author}</td>
                     <td>{doc.status}</td>
                     <td>
-                        <Button varient="secondary" className='mr-2 ' onClick={(e)=> getBookId(doc.id)}>Edit</Button>
-                        <Button varient="danger" className='mr-2 ' onClick={(e)=> deleteHandler(doc.id)}>Delete</Button>
+                        <Button variant="secondary" className='d-flex align-items-center justify-content-center' onClick={(e)=> getBookId(doc.id)}>Edit</Button>
+                        <Button variant="danger" className='d-flex align-items-center justify-content-center' onClick={(e)=> deleteHandler(doc.id)}>Delete</Button>
                     </td>
                 </tr>
                 )

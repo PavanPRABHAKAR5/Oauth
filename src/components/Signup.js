@@ -27,7 +27,7 @@ const Signup = () => {
       <h1 className="p-4 box mt-3 text-center">SIGN UP</h1>
       <div className="d-flex justify-content-center align-items-center box">
         {error && <Alert variant="danger">{error}</Alert>}
-        <Form className="rounded p-4 p-sm-3" onSubmit={handleSubmit}>
+        <Form className="rounded p-4 p-sm-3 form-box" onSubmit={handleSubmit}>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email Address</Form.Label>
@@ -47,12 +47,12 @@ const Signup = () => {
           </Form.Group>
           <div className="d-flex align-items-center justify-content-center">
             <Button variant="primary" type="submit">
-              Register
+              Sign up
             </Button>
           </div>
         </Form>
         <div className="p-4 box mt-3 text-center">
-          Already have an account? <Link to="/">Log In</Link>
+          Already have an account? <Link to="/login">Log In</Link>
         </div>
       </div>
     </>

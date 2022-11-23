@@ -17,12 +17,22 @@ const Homepageheader = () => {
     <>
      <nav className="navbar navbar-expand">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            CRUD
+          <a className="navbar-brand" >
+            CRUD APP
           </a>
           <ul id="navigation" className="navbar-nav">
 
-            <li  className="nav-item active">
+            <li className="nav-item pt-2 pb-2 user">
+            <a
+                id="active" className="nav-link "
+                aria-current="page"
+                aria-selected="true"
+              >
+                 {user && user.email.split("@")[0]}
+              </a>
+           
+            </li>
+            <li  className="nav-item active signout">
               <a
                 id="active" className="nav-link "
                 aria-current="page"

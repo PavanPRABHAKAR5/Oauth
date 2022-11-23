@@ -1,7 +1,8 @@
 import React from 'react'
 import PostDataService from "../services/Post.services";
 import {Table} from "react-bootstrap";
-import {useEffect, useState} from "react"
+import {useEffect, useState} from "react";
+import "./Login.css";
 const List = () => {
 
     const [books, setBooks ] = useState([])
@@ -18,6 +19,7 @@ const List = () => {
   return (
     <>
     <div className="p-4 box">
+        <h1 className='d-flex align-items-center justify-content-center mb-4'>List of books</h1>
     <Table striped bordered hover size="sm">
         <thead>
           <tr>
@@ -30,8 +32,8 @@ const List = () => {
         <tbody>
             {books.map((doc, index)=>{
                 return (
-                    <tr key={doc.id}>
-                    <td>{index + 1}</td>
+                    <tr  key={doc.id}>
+                    <td >{index + 1}</td>
                     <td>{doc.title}</td>
                     <td>{doc.author}</td>
                     <td>{doc.status}</td>
