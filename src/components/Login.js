@@ -40,7 +40,7 @@ const Login = () => {
     <h1 className="p-4 box mt-3 text-center">LOGIN</h1>
     <div className='d-flex justify-content-center align-items-center box'>
     {error && <Alert variant="danger">{error}</Alert>}
-    <Form className='rounded p-4 p-sm-3' onSubmit={handleSubmit}>
+    <Form className='rounded p-4 p-sm-3 form-box' onSubmit={handleSubmit}>
         <Form.Group className='mb-3' controlId='formBasicEmail'>
             <Form.Label>Email Address</Form.Label>
             <Form.Control type='email'

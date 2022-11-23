@@ -1,26 +1,20 @@
 import React from 'react'
-import { Button } from "react-bootstrap"
-import { useUserAuth } from '../context/UserAuthContext'
-
+import {useState} from 'react'
+import Homepageheader from './Homepageheader'
+import AddPost from './AddPost'
+import PostList from './PostList'
 const Home = () => {
-    const {user, logOut} = useUserAuth();
-    console.log(user)
-    const handleLogout = async ()=>{
-        try{
-            await logOut() 
-        }catch(err){
-            console.log(err.message)
-        }
-    }
+   const [bookId, setBookId] = useState("");
+
+   const getBookIdHandler = (id)=>{
+    console.log("The ID of document to be edited:", id);
+    setBookId(id);
+   }
   return (
     <>
-    <div className='p-4 box mt-3 text-center'>Hello Welcome 
-    <br/>
-    {user && user.email}
-    </div>
-    <div className='d-grid gap-2'>
-        <Button variant='primary' onClick={handleLogout}>Log Out</Button>
-    </div>
+    <Homepageheader/>
+    <AddPost id={bookId} setBookId={setBookId}/>
+    <PostList getBookId={getBookIdHandler}/>
     </>
   )
 }
